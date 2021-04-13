@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb-typescript-prettier",
+  "rules": {
+    "react/jsx-props-no-spreading": "warn",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/anchor-is-valid": "off", // Next spreads the prop from Link to a
+    "import/no-extraneous-dependencies": "off" //Mono repo deps
+  }
+}

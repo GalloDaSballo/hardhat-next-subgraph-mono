@@ -9,6 +9,7 @@ import "@nomiclabs/hardhat-waffle";
 import "hardhat-gas-reporter";
 import "@typechain/hardhat";
 import "solidity-coverage";
+import "@nomiclabs/hardhat-etherscan";
 
 const accounts = {
     count: 10,
@@ -58,6 +59,9 @@ const config: HardhatUserConfig = {
         gasPrice: 100,
         excludeContracts: ["Mock", "ERC20"],
     },
+    etherscan: {
+        apiKey: process.env.ETHERSCAN_API_KEY
+    }
 };
 
 export default config;

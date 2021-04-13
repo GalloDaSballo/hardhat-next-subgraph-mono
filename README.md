@@ -1,81 +1,47 @@
-# Solidity Template
+# Hardhat Next Subgraph Mono
 
-My favourite setup for writing Solidity smart contracts.
+Monorepo setup using:
+- Solidity Template by @TomAFrench and @paulrberg
+- NextJS with Typescript and EsLint
+- theGraph
 
-- [Hardhat](https://github.com/nomiclabs/hardhat): compile and run the smart contracts on a local development network
-- [hardhat-deploy](https://github.com/wighawag/hardhat-deploy): intelligently manage contract deployments and Etherscan verification
-- [TypeChain](https://github.com/ethereum-ts/TypeChain): generate TypeScript types for smart contracts
-- [Ethers](https://github.com/ethers-io/ethers.js/): renowned Ethereum library and wallet implementation
-- [Waffle](https://github.com/EthWorks/Waffle): tooling for writing comprehensive smart contract tests
-- [Solhint](https://github.com/protofire/solhint): linter
-- [Solcover](https://github.com/sc-forks/solidity-coverage) code coverage
-- [Prettier Plugin Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity): code formatter
 
-This is a GitHub template, which means you can reuse it as many times as you want. You can do that by clicking the "Use this
-template" button at the top of the page.
+## hardhat
+The contracts, with tests and tasks to publish new content, using Solidity Template
 
-## Usage
+## next
+The UI for the website, to interact with the protocol and publish new content, using NextJS
 
-### Pre Requisites
+## subgraph
+The subgraph code to track new posts, using TheGraph
 
-Before running any command, make sure to install dependencies:
+# Commands
 
-```sh
-yarn install
+## Shortcuts
+```
+yarn hardhat
+```
+```
+yarn next
+```
+```
+yarn subgraph
 ```
 
-### Compile
-
-Compile the smart contracts with Hardhat:
-
-```sh
-yarn compile
+### Example: Deploy with Hardhat
+```
+yarn hardhat deploy
 ```
 
-### TypeChain
-
-Compile the smart contracts and generate TypeChain artifacts:
-
-```sh
-yarn build
+### Example Run NextJS in Development Mode
+```
+yarn next dev
 ```
 
-### Lint Solidity
+# Setup Hardhat
 
-Lint the Solidity code:
+Rename `.env.example` to `.env` and fill in the details
 
-```sh
-yarn lint:sol
-```
+# Setup Subgraph
 
-### Lint TypeScript
-
-Lint the TypeScript code:
-
-```sh
-yarn lint:ts
-```
-
-### Test
-
-Run the Mocha tests:
-
-```sh
-yarn test
-```
-
-### Coverage
-
-Generate the code coverage report:
-
-```sh
-yarn coverage
-```
-
-### Clean
-
-Delete the smart contract artifacts, the coverage reports and the Hardhat cache:
-
-```sh
-yarn clean
-```
+Rename `YOU_GITHUB/SUB_GRAPHNAME` in `subgraph/package.json`
